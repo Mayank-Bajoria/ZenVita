@@ -103,3 +103,44 @@ button {
 .sign-in:hover {
   background-color: #285E58;
 }
+
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .login-card {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+body.dark-mode input {
+  background-color: #444;
+  color: white;
+  border-color: #666;
+}
+
+body.dark-mode .sign-in {
+  background-color: #4b8f7b;
+}
+
+body.dark-mode .forgot {
+  color: #8cdccc;
+}
+
+.theme-btn {
+  position: fixed;
+  display: inline-block;
+  width: auto;
+  top: 15px;
+  right: 20px;
+  padding: 6px 12px;
+  font-size: 13px;
+  background-color: #327C6E;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}

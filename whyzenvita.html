@@ -30,6 +30,9 @@
             <button class="login"><a style="color: green;" href="/login.html"> Log in</a></button>
             <button class="book-demo"><a href="/book_demo.html">Book a Demo</a> </button>
         </div>
+        <div class="hamburger">
+            ☰
+        </div>
     </nav>
 
     <section>
@@ -95,6 +98,14 @@
         </footer>
 
     </footer>
+       <script>
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".menu");
+
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
+</script>
 </body>
 
 </html>

@@ -28,6 +28,9 @@
             <button  class="login"><a style="color: green;" href="/login.html"> Log in</a></button>
             <button class="book-demo">Book a Demo</button>
         </div>
+        <div class="hamburger">
+            ☰
+        </div>
     </nav>
 
     <section >
@@ -85,8 +88,16 @@
                 <p class="footer-content">© 2025 ZenVita Healthcare. All rights reserved. <br>Transforming healthcare, one solution at a time.</p>
             </div>
             
-    </footer>
+            </footer>
 
     </footer>
+        <script>
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".menu");
+
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
+</script>
 </body>
 </html>

@@ -29,10 +29,12 @@
             </ul>
         </div>
 
-        <div class="buttons">
-            <button  class="login"><a style="color: green;" href="/login.html"> Log in</a></button>
+        <div class="buttons" id="buttons">
+            <button class="login"><a style="color: green;" href="/login.html"> Log in</a></button>
             <button class="book-demo"><a href="/book_demo.html">Book a Demo</a> </button>
         </div>
+        <div class="hamburger">☰</div>
+
     </nav>
 
     <section class="main"
@@ -105,7 +107,7 @@
     </section>
 
 
-    <section >
+    <section>
         <div class="slider-container-4">
             <div class="background-4">
                 <div>
@@ -129,38 +131,61 @@
     </section>
 
     <section>
-        <div class="why-zenvita"> <h1 class="large-text">Why Choose ZenVita?</h1>
-             <p class="small-text">We're redefining healthcare with our innovative approach</p>
+        <div class="why-zenvita">
+            <h1 class="large-text">Why Choose ZenVita?</h1>
+            <p class="small-text">We're redefining healthcare with our innovative approach</p>
         </div>
         <div class="cards-why-zenvita">
-<div class="card-4">
-            <h3 style="padding-top: 35px; color: rgb(8, 85, 219);padding-left: 10px;">🎯 Personalized Care</h3>
-            <p style="padding:35px 5px 0px 15px ;font-size: 14px;color: rgb(105, 104, 104);">Tailored healthcare solutions that meet individual needs</p>
+            <div class="card-4">
+                <h3 style="padding-top: 35px; color: rgb(8, 85, 219);padding-left: 10px;">🎯 Personalized Care</h3>
+                <p style="padding:35px 5px 0px 15px ;font-size: 14px;color: rgb(105, 104, 104);">Tailored healthcare
+                    solutions that meet individual needs</p>
+            </div>
+            <div class="card-5">
+                <h3 style="padding-top: 35px; color: rgb(8, 85, 219);padding-left: 10px;">💰 Cost Effective</h3>
+                <p style="padding:35px 5px 0px 15px ;font-size: 14px;color: rgb(105, 104, 104);">Reduce healthcare costs
+                    without compromising quality</p>
+            </div>
+            <div class="card-6">
+                <h3 style="padding-top: 35px; color: rgb(8, 85, 219);padding-left: 10px;">🔒 Secure & Private</h3>
+                <p style="padding:35px 5px 0px 15px ;font-size: 14px;color: rgb(105, 104, 104);">Your health data
+                    protected with industry-leading security</p>
+            </div>
+            <div class="card-7">
+                <h3 style="padding-top: 35px; color: rgb(8, 85, 219);padding-left: 10px;">📱 Digital First</h3>
+                <p style="padding:35px 5px 0px 15px ;font-size: 14px;color: rgb(105, 104, 104);">Modern technology for
+                    seamless healthcare management</p>
+            </div>
+
         </div>
-        <div class="card-5">
-            <h3 style="padding-top: 35px; color: rgb(8, 85, 219);padding-left: 10px;">💰 Cost Effective</h3>
-            <p style="padding:35px 5px 0px 15px ;font-size: 14px;color: rgb(105, 104, 104);">Reduce healthcare costs without compromising quality</p>
-        </div>
-        <div class="card-6">
-            <h3 style="padding-top: 35px; color: rgb(8, 85, 219);padding-left: 10px;">🔒 Secure & Private</h3>
-            <p style="padding:35px 5px 0px 15px ;font-size: 14px;color: rgb(105, 104, 104);">Your health data protected with industry-leading security</p>
-        </div>
-        <div class="card-7">
-            <h3 style="padding-top: 35px; color: rgb(8, 85, 219);padding-left: 10px;">📱 Digital First</h3>
-            <p style="padding:35px 5px 0px 15px ;font-size: 14px;color: rgb(105, 104, 104);">Modern technology for seamless healthcare management</p>
-        </div>
-       
-        </div>
-        
+
     </section>
 
     <footer>
         <div class="footer-background">
             <div>
-                <p class="footer-content">© 2025 ZenVita Healthcare. All rights reserved. <br>Transforming healthcare, one solution at a time.</p>
+                <p class="footer-content">© 2025 ZenVita Healthcare. All rights reserved. <br>Transforming healthcare,
+                    one solution at a time.</p>
             </div>
-            
+
     </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".menu");
+
+        const query = new URLSearchParams(window.location.search);
+        if (query.get("login") === "success") {
+            document.getElementById("buttons").removeChild(document.querySelector(".login"));
+        }
+
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle("open");
+        });
+            
+
+    </script>
+
 
 
 </body>
